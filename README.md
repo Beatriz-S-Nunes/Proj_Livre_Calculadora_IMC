@@ -22,27 +22,48 @@
 +------------------+
 
 | - nome           |
+
 | - peso           |
+
 | - altura         |
-+------------------+
-| +calcular_imc()  |
-| +classificar()   |
+
 +------------------+
 
+| +calcular_imc()  |
+
+| +classificar()   |
+
++------------------+
+
+
 +---------------------------+
+
 | ControladorIMC            |           --> Composição
+
 +---------------------------+
+
 | - lista_pessoas           |
+
 +---------------------------+
+
 | +adicionar_pessoa(pessoa) |
+
 | +mostrar_todos()          |
+
 +---------------------------+ 
 
+
 calculadora_imc/
+
 ├── main.py
+
 ├── README.md
+
 ├── package/
-│   ├── __init__.py
+
+│  
+
+├── __init__.py
 │   ├── pessoa.py
 │   ├── controlador.py
 │   └── classificacao.py
