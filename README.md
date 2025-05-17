@@ -16,8 +16,11 @@
       **Descrição**: O usuário pode registrar dados de diferentes pessoas e consultar posteriormente o IMC de cada uma.
 
 +------------------+
+
 | Pessoa           |
+
 +------------------+
+
 | - nome           |
 | - peso           |
 | - altura         |
