@@ -8,9 +8,11 @@
     - Composições fortes
 
   Casos de Uso:
+  
     Caso de Uso 1: Cálculo de IMC
       **Ator**: Usuário  
       **Descrição**: O usuário informa peso e altura. O sistema calcula o IMC e mostra o resultado e a classificação.
+      
     Caso de Uso 2: Registro de múltiplos perfis
       **Ator**: Usuário  
       **Descrição**: O usuário pode registrar dados de diferentes pessoas e consultar posteriormente o IMC de cada uma.
