@@ -61,9 +61,10 @@ calculadora_imc/
 
 ├── package/
 
-│  
+│  ├── __init__.py
 
-├── __init__.py
 │   ├── pessoa.py
+
 │   ├── controlador.py
+
 │   └── classificacao.py
