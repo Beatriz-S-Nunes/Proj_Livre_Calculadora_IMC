@@ -7,7 +7,7 @@ class Pessoa:
   def calculo_do_imc(self) -> float:
     return self.__peso / (self.__altura**2)
   
-  def classificao(self) -> str:
+  def classificar(self) -> str:
     imc = self.calculo_do_imc()
     if imc < 18.5:
       return "Magreza"
@@ -19,4 +19,4 @@ class Pessoa:
       return "Obesidade"
   
   def __str__(self):
-    return f"{self.__nome} - IMC: {self.calculo_do_imc():.2f} ({self.classicacao()})"
+    return f"{self.__nome} - IMC: {self.calculo_do_imc():.2f} ({self.classicar()})"
