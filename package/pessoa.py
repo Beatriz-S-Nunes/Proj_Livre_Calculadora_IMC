@@ -9,14 +9,7 @@ class Pessoa:
   
   def classificar(self) -> str:
     imc = self.calculo_do_imc()
-    if imc < 18.5:
-      return "Magreza"
-    elif 18.5 <= imc < 24.9:
-      return "Normal"
-    elif 25 <= imc < 29.9:
-      return "Sobrepeso"
-    else:
-      return "Obesidade"
+    return classificar_imc(imc)
   
   def __str__(self):
-    return f"{self.__nome} - IMC: {self.calculo_do_imc():.2f} ({self.classicar()})"
+    return f"{self.__nome} - IMC: {self.calculo_do_imc():.2f} ({self.classificar()})"
