@@ -8,8 +8,8 @@ def main():
     nome = input("Nome da pessoa (ou 'sair'): ")
     if nome.lower() == 'sair':
       break
-    peso == float(input("Peso (kg): "))
-    altura == float(input("Altura (m): "))
+    peso = float(input("Peso (kg): "))
+    altura = float(input("Altura (m): "))
    
     pessoa = Pessoa(nome, peso, altura)
     controlador.adicionar_pessoa(pessoa)
