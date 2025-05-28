@@ -16,3 +16,6 @@ def main():
      
   print("\nResultados:")
   controlador.mostrar_todos()
+
+if __name__ == "__main__":
+  main()
