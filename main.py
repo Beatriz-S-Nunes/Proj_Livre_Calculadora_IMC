@@ -2,7 +2,7 @@ from package.pessoa import Pessoa
 from package.controlador import ControladorIMC
 
 def main():
-  controlador = ControladorIMC
+  controlador = ControladorIMC()
 
   while True:
     nome = input("Nome da pessoa (ou 'sair'): ")
