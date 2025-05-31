@@ -3,7 +3,14 @@ from typing import List
 from package.pessoa import Pessoa 
 
 def salvar_pessoas(pessoas: List[Pessoa],caminho: str = "pessoas.json") -> None:
-  dados = []
+  dados = [{"nome": p._Pessoa__nome, "peso": p._Pessoa__peso, "altura": p._Pessoa__altura} 
+             for p in pessoas]
+  try:
+    with open(caminho, "w", encoding="utf-8") as f:
+            json.dump(dados, f, indent=2, ensure_ascii=False)
+  except Exception as e:
+    raise IOError(f"Falha ao salvar: {str(e)}")
+    
   for pessoa in pessoas:
         dados.append({
             "nome": pessoa._Pessoa__nome,  ributo privado __nome
