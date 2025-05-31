@@ -10,3 +10,4 @@ class ControladorIMC:
   def mostrar_todos(self):
     for pessoa in self.__lista_pessoas:
       print(pessoa)
+    salvar_pessoas(self.__lista_pessoas)
