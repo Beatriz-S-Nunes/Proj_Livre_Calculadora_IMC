@@ -7,14 +7,16 @@ class ControladorIMC:
     self.__lista_pessoas: List[Pessoa] = carregar_pessoas()
     self.carregar_dados()
 
-  def carregar_dados(self):
-    from package.serializador import carregar_pessoas
-    self.__lista_pessoas = carregar_pessoas()
-
-  def adicionar_pessoa(self, pessoa: Pessoa):
+  def adicionar_pessoa(self, pessoa: Pessoa) -> None:
+    if not isinstance(pessoa, Pessoa):
+      raise TypeError("Objeto deve ser do tipo Pessoa")
     self.__lista_pessoas.append(pessoa)
-
-  def mostrar_todos(self):
-    for pessoa in self.__lista_pessoas:
-      print(pessoa)
     salvar_pessoas(self.__lista_pessoas)
+    
+  def get_historico(self) -> List[Pessoa]:
+        return self.__lista_pessoas.copy()
+    
+    def limpar_historico(self) -> None:
+        self.__lista_pessoas.clear()
+        salvar_pessoas(self.__lista_pessoas)
+      
