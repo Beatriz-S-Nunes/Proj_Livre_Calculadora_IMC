@@ -17,42 +17,86 @@
       **Ator**: Usuário  
       **Descrição**: O usuário pode registrar dados de diferentes pessoas e consultar posteriormente o IMC de cada uma.
 
-+------------------+
++-----------------------+
 
-| Pessoa           |
+| Pessoa |
 
-+------------------+
++------------------------+
 
-| - nome           |
+|   - __nome: str          |
 
-| - peso           |
+|   - __peso: float        |
 
-| - altura         |
-
-+------------------+
-
-| +calcular_imc()  |
-
-| +classificar()   |
+|   - __altura: float      |
 
 +------------------+
 
+| +calculo_do_imc()      |
 
-+---------------------------+
+| +classificar()         |
 
-| ControladorIMC            |           --> Composição
+| +__str__()             |
 
-+---------------------------+
++------------------------+
 
-| - lista_pessoas           |
+           ▲
+           │ Herança
+           │
++------------------------+
 
-+---------------------------+
+|     PessoaAtleta       | 
 
-| +adicionar_pessoa(pessoa) |
++------------------------+
 
-| +mostrar_todos()          |
+| (herda atributos)      |
 
-+---------------------------+ 
++------------------------+
+
+| +classificar()         |
+
++------------------------+
+
+
+               ◄◄◄◄◄◄◄◄◄◄◄◄◄◄
+                usada por (composição)
+                
++----------------------------+
+
+|      ControladorIMC        |
+
+
++----------------------------+
+
+| - __lista_pessoas: list    |
+
++----------------------------+
+
+| +adicionar_pessoa()        |
+
+| +mostrar_todos()           |
+
++----------------------------+
+
++----------------------------+
+
+|   classificar_imc(imc)     |
+
+|  (função externa utilitária) |
+
++----------------------------+
+
++----------------------------+
+
+|     serializador.py        |
+
++----------------------------+
+
+| +salvar_pessoas()          |
+
+| +carregar_pessoas()        |
+
++----------------------------+
+
 
 
 calculadora_imc/
@@ -60,6 +104,18 @@ calculadora_imc/
 ├── main.py
 
 ├── README.md
+
+├── imc_gui.py 
+
+│
+
+├── pessoas.json              
+
+│
+
+├── requirements.txt           
+
+│
 
 ├── package/
 
@@ -70,3 +126,6 @@ calculadora_imc/
 │   ├── controlador.py
 
 │   └── classificacao.py
+
+│   └── serializador.py 
+
