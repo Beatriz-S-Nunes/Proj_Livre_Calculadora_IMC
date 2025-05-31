@@ -1,9 +1,10 @@
 from package.pessoa import Pessoa
 from package.serializador import salvar_pessoas
+from typing import List
 
 class ControladorIMC:
   def __init__(self):
-    self.__lista_pessoas = []
+    self.__lista_pessoas: List[Pessoa] = carregar_pessoas()
     self.carregar_dados()
 
   def carregar_dados(self):
