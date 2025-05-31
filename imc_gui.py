@@ -1,20 +1,26 @@
 import tkinter as tk
 from tkinter import messagebox
-from package.pessoa import Pessoa, PessoaAtleta
+from package import Pessoa, PessoaAtleta
 
 def calcular():
-  nome = entry_nome.get()
-  peso = float(entry_peso.get())
-  altura = float(entry_altura.get())
-    
-  if var_tipo.get() == ""comum":
-    pessoa = Pessoa(nome, peso, altura)
-  else:
-    pessoa = PessoaAtleta(nome, peso, altura)
+  try:
+    nome = entry_nome.get()
+    peso = float(entry_peso.get())
+    altura = float(entry_altura.get())
   
-  resultado - str(pessoa)
-  messagebox.showinfo("Resultado", resultado)
-
+    if peso <= 0 or altura <= 0:
+      raise ValueError("O peso e a altura devem ser positivos.")
+      
+    if var_tipo.get() == ""comum":
+      pessoa = Pessoa(nome, peso, altura)
+     else:
+      pessoa = PessoaAtleta(nome, peso, altura)
+        
+    resultado = str(pessoa)
+    messagebox.showinfo("Resultado", resultado)
+  except ValueError as e:
+    messagebox.showerror("Erro", f"Entrada inválida: {str(e)}")
+    
 janela = tk.Tk()
 janela.title("Calculadora de IMC")
 
@@ -22,11 +28,11 @@ tk.Label(janela, text="Nome:").pack()
 entry_nome = tk.Entry(janela)
 entry_nome.pack()
 
-tk.Label(janela, text="Peso (kg):")pack()
+tk.Label(janela, text="Peso (kg):").pack()
 entry_peso = tk.Entry(janela)
 entry_peso.pack()
 
-tk.Label(janela, text="Altura (m):").pack
+tk.Label(janela, text="Altura (m):").pack()
 entry_altura = tk.Entry(janela)
 entry_altura.pack()
 
