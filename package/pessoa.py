@@ -15,3 +15,13 @@ class Pessoa:
   
   def __str__(self):
     return f"{self.__nome} - IMC: {self.calculo_do_imc():.2f} ({self.classificar()})"
+
+class PessoaAtleta(Pessoa):
+  def classificar(self) -> str:
+    imc = self.calculo_do_imc()
+    if imc < 20:
+      return "Atleta - Abaixo do ideal"
+    elif 20 <= imc < 25:
+      return "Atleta - No ideal"
+    else:
+      return "Atleta - Acima do ideal"
