@@ -12,7 +12,7 @@ def main():
     altura = float(input("Altura (m): "))
    
     pessoa = Pessoa(nome, peso, altura)
-    controlador.adicionar_pessoa(self, pessoa)
+    controlador.adicionar_pessoa(pessoa)
      
   print("\nResultados:")
   controlador.mostrar_todos()
