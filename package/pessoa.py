@@ -1,3 +1,5 @@
+from package.classificacao import classificar_imc
+
 class Pessoa:
   def __init__(self, nome: str, peso: float, altura: float):
     self.__nome = nome
