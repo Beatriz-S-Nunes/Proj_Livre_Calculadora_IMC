@@ -14,9 +14,9 @@ class ControladorIMC:
     salvar_pessoas(self.__lista_pessoas)
     
   def get_historico(self) -> List[Pessoa]:
-        return self.__lista_pessoas.copy()
+    return self.__lista_pessoas.copy()
     
-    def limpar_historico(self) -> None:
-        self.__lista_pessoas.clear()
-        salvar_pessoas(self.__lista_pessoas)
+  def limpar_historico(self) -> None:
+    self.__lista_pessoas.clear()
+    salvar_pessoas(self.__lista_pessoas)
       
