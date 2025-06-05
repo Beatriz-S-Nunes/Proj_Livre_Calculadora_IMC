@@ -1,5 +1,5 @@
 from package.pessoa import Pessoa
-from package.serializador import salvar_pessoas
+from package.serializador import salvar_pessoas, carregar_pessoas
 from typing import List
 
 class ControladorIMC:
