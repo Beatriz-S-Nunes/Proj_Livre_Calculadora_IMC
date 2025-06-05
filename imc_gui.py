@@ -13,7 +13,7 @@ def calcular():
       
     if var_tipo.get() == "comum":
       pessoa = Pessoa(nome, peso, altura)
-     else:
+    else:
       pessoa = PessoaAtleta(nome, peso, altura)
         
     resultado = str(pessoa)
