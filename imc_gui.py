@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
-from package import Pessoa, PessoaAtleta
+from package.pessoa import Pessoa, PessoaAtleta
 
 def calcular():
   try:
@@ -11,7 +11,7 @@ def calcular():
     if peso <= 0 or altura <= 0:
       raise ValueError("O peso e a altura devem ser positivos.")
       
-    if var_tipo.get() == ""comum":
+    if var_tipo.get() == "comum":
       pessoa = Pessoa(nome, peso, altura)
      else:
       pessoa = PessoaAtleta(nome, peso, altura)
