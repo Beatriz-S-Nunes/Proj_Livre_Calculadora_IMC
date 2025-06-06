@@ -11,7 +11,7 @@ def salvar_pessoas(pessoas: List[Pessoa],caminho: str = "pessoas.json") -> None:
   except Exception as e:
     raise IOError(f"Falha ao salvar: {str(e)}")
 
-def carregar_pessoas(caminho: str = "pessoas.json") -> List[Pessoa]':
+def carregar_pessoas(caminho: str = "pessoas.json") -> List[Pessoa]:
   try:
     with open(caminho, "r", encoding="utf-8") as f:
       dados = json.load(f)
