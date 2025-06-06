@@ -1,8 +1,5 @@
 # Proj_Livre_Calculadora_IMC
   Este é um projeto de calculadora de IMC (Índice de Massa Corporal) em Python, que tem como objetivo, permitir que o usuário possa inserir seu peso e altura e receber o resultado do cálculo e sua categoria correspondente (ex: Magreza, Normal, Sobrepeso etc.).
-  
-  ![Interface Gráfica](img/imc_gui_example.png)
-> *Exemplo da interface feita com tkinter.*
 
   Ele usa 4 dos princípios da Orientação a Objetos:
     - Herança
@@ -117,4 +114,16 @@ calculadora_imc/
     ├── controlador.py
     ├── classificacao.py
     └── serializador.py
+```
+
+---
+
+Para executar a interface grafica:
+```bash
+python imc_gui.py
+```
+
+Para executar via terminal:
+```bash
+python main.py
 ```
