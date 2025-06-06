@@ -19,4 +19,7 @@ class ControladorIMC:
   def limpar_historico(self) -> None:
     self.__lista_pessoas.clear()
     salvar_pessoas(self.__lista_pessoas)
-      
+
+  def mostrar_todos(self) -> None:
+    for pessoa in self.__lista_pessoas:
+      print(pessoa)
