@@ -5,7 +5,7 @@ from typing import List
 class ControladorIMC:
   def __init__(self):
     self.__lista_pessoas: List[Pessoa] = carregar_pessoas()
-    self.carregar_dados()
+    # self.carregar_dados()
 
   def adicionar_pessoa(self, pessoa: Pessoa) -> None:
     if not isinstance(pessoa, Pessoa):
